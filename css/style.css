@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -9,26 +11,30 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #222222;
+  font-family: "Roboto", sans-serif;
 }
-h1 {
+.title {
   font-size: 20px;
   color: #ffffff;
-  margin-top: 20px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  font-weight: 600;
 }
-.gerador {
-  width: 320px;
+.generator {
+  width: 620px;
   min-height: 400px;
   margin-top: 10px;
   margin-bottom: 30px;
-  padding: 20px 20px 30px;
+  padding: 20px 20px 50px 20px;
   background-color: #fffdff;
   border-radius: 30px;
 }
-.gerador .box {
+.generator .box {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 50px;
 }
 .header {
   display: flex;
@@ -37,27 +43,28 @@ h1 {
 }
 .header h4 {
   margin: 0 10px;
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 600;
 }
-.input-text {
+.hex-code-input {
   background-color: #fff;
   height: 30px;
   margin: 10px 10px 20px;
-  font-size: 19px;
+  font-size: 18px;
   border: 1px solid #714593;
   outline: none;
 }
-.paletas {
+.palettes {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-ul {
+.color-list {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-ul li {
+.color-list li {
   text-align: center;
   width: 120px;
   padding: 10px 10px;
@@ -69,6 +76,6 @@ ul li {
   border: 2px solid transparent;
   cursor: pointer;
 }
-ul li:hover {
+.color-list li:hover {
   border: 2px solid #222222;
 }

@@ -1,7 +1,7 @@
 const liColors = document.querySelectorAll("li");
-const list = document.querySelector("ul");
+const list = document.querySelector(".color-list");
 const color = document.querySelector("#color");
-const inputText = document.querySelector(".input-text");
+const inputText = document.querySelector(".hex-code-input");
 
 inputText.addEventListener("keydown", (e) => {
   let codeHex = e.target.value;
@@ -40,7 +40,6 @@ liColors.forEach((c, i) => {
 liColors.forEach((liColor) => {
   liColor.addEventListener("click", (e) => clickToCopy(e.target));
 });
-// events
 color.addEventListener("change", (e) => gerador(e.target.value.slice(1)));
 
 function gerador(hex) {
@@ -55,8 +54,6 @@ function gerador(hex) {
     geraLis(hex);
   }
 }
-
-//gerador("1c1c8e")
 
 function setLimit(h) {
   if (h > 255) {
@@ -106,7 +103,7 @@ function geraLis(hex) {
 function clickToCopy(el) {
   let textToCopy = el.textContent;
   el.style.pointerEvents = "none";
-  el.textContent = "Copiado!";
+  el.textContent = "Copied!";
   el.style.color = "#d83440";
   setTimeout(() => {
     el.textContent = textToCopy;
