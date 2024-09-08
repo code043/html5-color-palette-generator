@@ -70,18 +70,14 @@ body {
 .generate-button {
   font-size: 15px;
   font-weight: 600;
-  height: 30px;
+  height: 35px;
   width: 200px;
-  color: #33c85b;
-  background-color: transparent;
+  color: #ffffff;
+  background-color: #714593;
   border: none;
-  border: 2px solid #1aa53f;
+  border: 1px solid #ffffff;
   border-radius: 5px;
   cursor: pointer;
-}
-.generate-button:hover {
-  color: #dcf9e4;
-  background-color: #33c85b;
 }
 
 .palettes {

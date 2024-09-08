@@ -14,6 +14,7 @@ function generatePalette(codeHex, elem) {
         gerador(elem.value.slice(1));
       }
     }
+    buttonGenerate.style.backgroundColor = inputText.value;
   }
 }
 
@@ -71,6 +72,7 @@ function gerador(hex) {
   } else {
     geraLis(hex);
   }
+  buttonGenerate.style.backgroundColor = "#" + hex;
 }
 
 function setLimit(h) {
