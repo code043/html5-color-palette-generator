@@ -2,22 +2,40 @@ const liColors = document.querySelectorAll("li");
 const list = document.querySelector(".color-list");
 const color = document.querySelector("#color");
 const inputText = document.querySelector(".hex-code-input");
+const buttonGenerate = document.querySelector("#generate");
 
-inputText.addEventListener("keydown", (e) => {
-  let codeHex = e.target.value;
-  if (e.keyCode === 13) {
+function generatePalette(codeHex, elem) {
+  if (inputText.value != "") {
     if (codeHex.substring(0, 1) == "#") {
       if (
         codeHex.substring(1).length == 6 &&
         isHexadecimal(codeHex.substring(1))
       ) {
-        console.log(isHexadecimal(codeHex.substring(1)));
-        gerador(e.target.value.slice(1));
+        gerador(elem.value.slice(1));
       }
     }
+  }
+}
+
+function button() {
+  let codeHex = inputText.value;
+  if (codeHex == "") return;
+  generatePalette(codeHex, inputText);
+  color.value = inputText.value;
+  inputText.value = "";
+}
+function input(e) {
+  let codeHex = e.target.value;
+  if (codeHex == "") return;
+  if (e.keyCode === 13) {
+    generatePalette(codeHex, e.target);
+    color.value = inputText.value;
     inputText.value = "";
   }
-});
+}
+
+inputText.addEventListener("keydown", input);
+buttonGenerate.addEventListener("click", button);
 color.value = "#714593";
 const myColors = [
   "#714593",
